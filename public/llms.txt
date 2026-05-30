@@ -1,0 +1,58 @@
+# AtS Constructions & Engineering
+
+> A Singapore-based construction and engineering firm specialising in refineries, pipelines, commercial spaces and residential apartments. Built on senior-led delivery, zero-compromise safety, and owner-accountable project management.
+
+## Overview
+
+AtS Constructions & Engineering delivers infrastructure across eight disciplines from a single accountable team. The firm was founded by senior engineers who wanted to deliver work without the friction of legacy hierarchy — and without the corner-cutting of low-cost contracting. Every project is supervised personally by the same engineers who quoted it.
+
+## Pages
+
+- [Home](/): Introduction to AtS, company pillars, stats, featured work imagery, and a call to start a project.
+- [About](/about): The firm's story, craft philosophy, crew culture, supervisor standards, and accountability promise.
+- [Services](/services): Eight engineering disciplines — General Construction, Infrastructure Works, Mechanical & Electrical, Civil Engineering, Refinery & Plant, Pipeline & Pipework, Design & Engineering, and Plant Maintenance. Each tile opens a popup with full scope, capabilities, deliverables, and a CTA to discuss the scope.
+- [Certifications](/certifications): Quality, safety and sustainability credentials — ISO 9001, ISO 45001, ISO 14001, BCA Registered Contractor, BizSafe Star, and BCA Green Mark. Each card opens a popup explaining why the certification matters and how it is maintained.
+- [Insights](/blog): Field notes from senior engineers on topics including BIM adoption, construction safety, sustainable building, structural steel, and welding standards. Articles open in a popup overlay.
+- [Contact](/contact): Project enquiry form (name, company, email, phone, scope, message) backed by Supabase. Singapore office address, phone, email, and an embedded map.
+- [Admin](/admin): Internal dashboard for viewing and managing contact form submissions.
+
+## Core Principles
+
+1. **Safety, first principle** — Zero-compromise protocols on every site. The team returns home; that is the project's first deliverable.
+2. **Engineered precision** — Tolerances measured to the millimetre. Every weld, pour and joint is logged and accountable.
+3. **Owner-led delivery** — The senior engineers who quote the work are the same who run it. No hand-offs, no surprises.
+4. **Built for tomorrow** — BIM, sensors and modern QA loops. Modern infrastructure, not last-decade methods.
+
+## Services
+
+- General Construction — residential, commercial and industrial buildings
+- Infrastructure Works — roads, drainage, earthworks and utilities
+- Mechanical & Electrical — M&E fit-out, HVAC, fire protection and controls
+- Civil Engineering — structural, geotechnical and foundation works
+- Refinery & Plant — EPCC, turnaround and maintenance for oil & gas facilities
+- Pipeline & Pipework — fabrication, installation, testing and commissioning
+- Design & Engineering — BIM, structural design and value engineering
+- Plant Maintenance — preventive, predictive and shutdown maintenance
+
+## Certifications
+
+- ISO 9001 — Quality Management Systems
+- ISO 45001 — Occupational Health & Safety
+- ISO 14001 — Environmental Management
+- BCA Registered Contractor — Singapore Building & Construction Authority
+- BizSafe Star — Highest tier WSH Council certification
+- BCA Green Mark — Sustainable building alignment
+
+## Contact
+
+- Address: 18 Cross Street, #11-08 Cross Street Exchange, Singapore 048423
+- Phone: +65 6123 4567
+- Email: hello@ats-engineering.sg
+- Response time: Within one business day
+
+## Key Stats
+
+- 12 disciplines under one roof
+- 48-hour engineering response window
+- 100% senior oversight on every site
+- 0 lost-time incidents target
