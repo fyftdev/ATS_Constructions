@@ -129,7 +129,8 @@ export const posts: Post[] = [
     id: "construction-handover-checklist",
     tag: "Construction",
     title: "The Handover Walk: How a Project Actually Ends",
-    excerpt: "A project is not finished when the punch list closes — it is finished when the client signs.",
+    excerpt:
+      "A project is not finished when the punch list closes — it is finished when the client signs.",
     date: "Jan 2026",
     read: "5 min",
     img: bHandover,

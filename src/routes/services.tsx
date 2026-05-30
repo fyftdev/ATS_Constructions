@@ -35,9 +35,21 @@ function Services() {
     <Layout>
       <section className="px-4 md:px-6 pt-12 md:pt-20 pb-10">
         <div className="max-w-[1280px] mx-auto">
-          <p className="label-mono mb-6 reveal">Services</p>
+          <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-6 reveal">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span
+                className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+            </span>
+            Services
+          </p>
           <h1 className="font-display text-[clamp(2.5rem,7vw,6.5rem)] leading-[0.98] max-w-5xl reveal text-ink">
-            Eight disciplines, <em className="italic text-gradient">one accountable</em> contractor.
+            EIGHT DISCIPLINES, <em className="italic text-gradient">ONE ACCOUNTABLE</em> CONTRACTOR
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-ink leading-relaxed reveal">
             Tap any tile to open the full scope — what we do, why it matters, and what we hand over.

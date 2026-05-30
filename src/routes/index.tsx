@@ -77,14 +77,23 @@ function Home() {
       <section className="relative px-4 md:px-6">
         <div className="max-w-[1280px] mx-auto pt-12 md:pt-20 pb-32 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 reveal">
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 label-mono mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-glow animate-pulse" />
-              Singapore · Constructions & Engineering
+            <div className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-8">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span
+                  className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+                <span
+                  className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+              </span>
+              Singapore · Constructions &amp; Engineering
             </div>
             <h1 className="font-display text-[clamp(2.75rem,8vw,7.5rem)] leading-[0.96] tracking-tight text-ink">
-              We engineer
+              WE ENGINEER
               <br />
-              what <em className="italic text-gradient">endures</em>.
+              WHAT <em className="italic text-gradient">ENDURES</em>
             </h1>
             <p className="mt-8 max-w-xl text-lg text-ink-soft leading-relaxed">
               From refineries to residences, AtS builds the infrastructure of modern Singapore with
@@ -139,9 +148,21 @@ function Home() {
       <section className="px-4 md:px-6 py-24">
         <div className="max-w-[1280px] mx-auto grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 reveal">
-            <p className="label-mono mb-5">On the ground</p>
+            <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-5">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span
+                  className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+                <span
+                  className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+              </span>
+              On the ground
+            </p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.02] text-ink">
-              Work that <em className="italic text-gradient">begins at dawn.</em>
+              WORK THAT <em className="italic text-gradient">BEGINS AT DAWN</em>
             </h2>
             <p className="mt-6 text-ink-soft leading-relaxed">
               Long before drawings become buildings, our crews are on site — checking torque,
@@ -210,9 +231,21 @@ function Home() {
             </div>
           </div>
           <div className="lg:col-span-5 lg:order-2 reveal">
-            <p className="label-mono mb-5">How we choose work</p>
+            <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-5">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span
+                  className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+                <span
+                  className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+              </span>
+              How we choose work
+            </p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.02] text-ink">
-              We say no <em className="italic text-gradient">often.</em>
+              WE SAY NO <em className="italic text-gradient">OFTEN</em>
             </h2>
             <p className="mt-6 text-ink-soft leading-relaxed">
               We take on what we can supervise personally. That means fewer concurrent sites, more
@@ -230,14 +263,26 @@ function Home() {
       <section className="px-4 md:px-6 py-24 relative">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-            <p className="label-mono mb-5">The AtS standard</p>
+            <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-5">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span
+                  className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+                <span
+                  className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+              </span>
+              The AtS standard
+            </p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.02] text-ink uppercase tracking-tight">
               Achieving Timelines <em className="italic text-gradient">Safely.</em>
             </h2>
             <p className="mt-6 text-ink-soft leading-relaxed">
-              More than an acronym — it's the discipline behind every AtS site. We deliver on schedule
-              without ever trading away the safety of our people or the integrity of the build.
-              Four values keep us honest to that promise.
+              More than an acronym — it's the discipline behind every AtS site. We deliver on
+              schedule without ever trading away the safety of our people or the integrity of the
+              build. Four values keep us honest to that promise.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -268,7 +313,19 @@ function Home() {
       {/* QUOTE */}
       <section className="px-4 md:px-6 py-24">
         <div className="max-w-4xl mx-auto text-center reveal">
-          <p className="label-mono mb-8">A note from our founders</p>
+          <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-8">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span
+                className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+            </span>
+            A note from our founders
+          </p>
           <blockquote className="font-display text-[clamp(1.75rem,4.5vw,3.75rem)] leading-[1.12] text-ink">
             "Buildings outlive their builders. We design every joint and every beam knowing it will
             be inspected — most importantly, by{" "}
@@ -276,7 +333,19 @@ function Home() {
           </blockquote>
           <div className="mt-10 inline-flex items-center gap-4">
             <div className="h-px w-12 bg-aurora-2/40" />
-            <p className="label-mono">The AtS Founders</p>
+            <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span
+                  className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+                <span
+                  className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+              </span>
+              The AtS Founders
+            </p>
             <div className="h-px w-12 bg-aurora-2/40" />
           </div>
         </div>

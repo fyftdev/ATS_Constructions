@@ -15,14 +15,46 @@ import fieldConstruction from "@/assets/field-construction.webp";
 import fieldManpower from "@/assets/field-manpower.webp";
 
 const fields = [
-  { title: "Oil & Gas", body: "Upstream, midstream and downstream — from wellhead to refinery.", img: fieldOilGas },
-  { title: "Petrochemical", body: "Crackers, polymer trains and feedstock units built to spec.", img: fieldPetrochemical },
-  { title: "Specialty Chemical", body: "Tight-tolerance reactors, jacketed piping and clean utilities.", img: fieldSpecialty },
-  { title: "Energy", body: "LNG terminals, tank farms and energy storage infrastructure.", img: fieldEnergy },
-  { title: "Power Generation", body: "Conventional and combined-cycle plants, turbines and BOP.", img: fieldPower },
-  { title: "Green Energy", body: "Solar, wind and hydrogen-ready infrastructure for the transition.", img: fieldGreen },
-  { title: "Construction", body: "Commercial, industrial and infrastructure builds from ground to fit-out.", img: fieldConstruction },
-  { title: "Skilled Manpower Supply", body: "Branded AtS crews — welders, fitters, riggers and supervisors on demand.", img: fieldManpower },
+  {
+    title: "Oil & Gas",
+    body: "Upstream, midstream and downstream — from wellhead to refinery.",
+    img: fieldOilGas,
+  },
+  {
+    title: "Petrochemical",
+    body: "Crackers, polymer trains and feedstock units built to spec.",
+    img: fieldPetrochemical,
+  },
+  {
+    title: "Specialty Chemical",
+    body: "Tight-tolerance reactors, jacketed piping and clean utilities.",
+    img: fieldSpecialty,
+  },
+  {
+    title: "Energy",
+    body: "LNG terminals, tank farms and energy storage infrastructure.",
+    img: fieldEnergy,
+  },
+  {
+    title: "Power Generation",
+    body: "Conventional and combined-cycle plants, turbines and BOP.",
+    img: fieldPower,
+  },
+  {
+    title: "Green Energy",
+    body: "Solar, wind and hydrogen-ready infrastructure for the transition.",
+    img: fieldGreen,
+  },
+  {
+    title: "Construction",
+    body: "Commercial, industrial and infrastructure builds from ground to fit-out.",
+    img: fieldConstruction,
+  },
+  {
+    title: "Skilled Manpower Supply",
+    body: "Branded AtS crews — welders, fitters, riggers and supervisors on demand.",
+    img: fieldManpower,
+  },
 ];
 
 export const Route = createFileRoute("/about")({
@@ -76,9 +108,21 @@ function About() {
     <Layout>
       <section className="px-4 md:px-6 pt-12 md:pt-20 pb-12">
         <div className="max-w-[1280px] mx-auto">
-          <p className="label-mono mb-6 reveal">About AtS</p>
+          <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-6 reveal">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span
+                className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+            </span>
+            About AtS
+          </p>
           <h1 className="font-display text-[clamp(2.5rem,7vw,6.5rem)] leading-[0.98] max-w-5xl reveal text-ink">
-            A firm built on <em className="italic text-gradient">senior engineering</em> judgement.
+            A FIRM BUILT ON <em className="italic text-gradient">SENIOR ENGINEERING</em> JUDGEMENT
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-ink-soft leading-relaxed reveal">
             AtS Constructions & Engineering was started by senior engineers who wanted to deliver
@@ -113,7 +157,19 @@ function About() {
               className={`grid lg:grid-cols-12 gap-8 md:gap-12 items-start reveal`}
             >
               <div className={`lg:col-span-4 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <p className="label-mono mb-4">{w.label}</p>
+                <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-4">
+                  <span className="relative flex h-2.5 w-2.5 shrink-0">
+                    <span
+                      className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                      style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                    />
+                    <span
+                      className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                      style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                    />
+                  </span>
+                  {w.label}
+                </p>
                 <h2 className="font-display text-4xl md:text-5xl leading-[1.05] text-ink">
                   {w.title}
                 </h2>
@@ -152,9 +208,21 @@ function About() {
       <section className="px-4 md:px-6 pb-24">
         <div className="max-w-[1280px] mx-auto">
           <div className="max-w-3xl mb-12 reveal">
-            <p className="label-mono mb-5">Field of work</p>
+            <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-5">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span
+                  className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+                <span
+                  className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                  style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                />
+              </span>
+              Field of work
+            </p>
             <h2 className="font-display text-4xl md:text-6xl leading-[1.02] text-ink">
-              Sectors we <em className="italic text-gradient">build for.</em>
+              SECTORS WE <em className="italic text-gradient">BUILD FOR</em>
             </h2>
             <p className="mt-6 text-ink-soft leading-relaxed">
               From hydrocarbons to the energy transition — eight industries that demand the same
@@ -188,7 +256,6 @@ function About() {
           </div>
         </div>
       </section>
-
 
       <section className="px-4 md:px-6 pb-24">
         <div className="max-w-3xl mx-auto text-center reveal">

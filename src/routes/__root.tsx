@@ -85,15 +85,39 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "AtS Constructions & Engineering — Singapore" },
       { name: "twitter:title", content: "AtS Constructions & Engineering — Singapore" },
-      { name: "description", content: "Builds a multi-page website and brand system for AtS Constructions & Engineering." },
-      { property: "og:description", content: "Builds a multi-page website and brand system for AtS Constructions & Engineering." },
-      { name: "twitter:description", content: "Builds a multi-page website and brand system for AtS Constructions & Engineering." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8d495237-e64f-4165-b185-c1fd0979dd86/id-preview-66bb98cc--ba74c942-55f8-4dd9-a9cf-c64ce8e26ea3.lovable.app-1779647831024.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8d495237-e64f-4165-b185-c1fd0979dd86/id-preview-66bb98cc--ba74c942-55f8-4dd9-a9cf-c64ce8e26ea3.lovable.app-1779647831024.png" },
+      {
+        name: "description",
+        content:
+          "Builds a multi-page website and brand system for AtS Constructions & Engineering.",
+      },
+      {
+        property: "og:description",
+        content:
+          "Builds a multi-page website and brand system for AtS Constructions & Engineering.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Builds a multi-page website and brand system for AtS Constructions & Engineering.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8d495237-e64f-4165-b185-c1fd0979dd86/id-preview-66bb98cc--ba74c942-55f8-4dd9-a9cf-c64ce8e26ea3.lovable.app-1779647831024.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8d495237-e64f-4165-b185-c1fd0979dd86/id-preview-66bb98cc--ba74c942-55f8-4dd9-a9cf-c64ce8e26ea3.lovable.app-1779647831024.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "canonical", href: "/" },
+      // ADD THESE THREE LINES: Points the browser directly to your transparent logo file
+      { rel: "icon", type: "image/png", href: "/ats-logo-transparent.png" },
+      { rel: "shortcut icon", type: "image/png", href: "/ats-logo-transparent.png" },
+      { rel: "apple-touch-icon", href: "/ats-logo-transparent.png" },
     ],
     scripts: [
       {
@@ -133,7 +157,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <Scripts />
-      </body>
+      </body>{" "}
+      {/* Clean and properly closed body tag */}
     </html>
   );
 }

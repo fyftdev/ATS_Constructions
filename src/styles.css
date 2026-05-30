@@ -107,7 +107,17 @@
     oklch(0.68 0.2 55) 100%
   );
 }
-
+@layer utilities {
+  .blueprint-header-strip {
+    background: #0f172a;
+    color: #f8fafc;
+    @apply font-mono text-[11px] font-black uppercase tracking-widest rounded-full;
+    box-shadow:
+      0 0 0 1px oklch(1 0 0 / 0.08),
+      0 8px 24px -8px oklch(0.1 0.02 60 / 0.5);
+    letter-spacing: 0.16em;
+  }
+}
 @layer base {
   * {
     border-color: var(--color-border);

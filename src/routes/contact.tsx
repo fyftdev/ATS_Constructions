@@ -116,21 +116,34 @@ function Contact() {
       toast.success("Quote request logged in database!");
       setStatus("sent");
     } catch (err: unknown) {
-      toast.error(`Database Error: ${err instanceof Error ? err.message : "Failed to sync entries"}`);
+      toast.error(
+        `Database Error: ${err instanceof Error ? err.message : "Failed to sync entries"}`,
+      );
       setStatus("idle");
     }
   }
-
 
   return (
     <Layout>
       <section className="px-4 md:px-6 pt-12 md:pt-20 pb-10">
         <div className="max-w-[1280px] mx-auto">
-          <p className="label-mono mb-6 reveal">Contact</p>
+          <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-6 reveal">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span
+                className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+            </span>
+            Contact
+          </p>
           <h1 className="font-display text-[clamp(2.5rem,7vw,6.5rem)] leading-[0.98] reveal text-ink">
-            Have a build in mind?
+            HAVE A BUILD IN MIND?
             <br />
-            <em className="italic text-gradient">Let's engineer it.</em>
+            <em className="italic text-gradient">LET'S ENGINEER IT</em>
           </h1>
           <p className="mt-6 max-w-xl text-base md:text-lg text-ink-soft leading-relaxed reveal">
             A senior engineer will personally reply within one business day.
@@ -259,7 +272,19 @@ function Contact() {
 
           <aside className="lg:col-span-5 space-y-5 reveal">
             <div className="glass rounded-3xl p-7">
-              <p className="label-mono mb-5">Singapore Office</p>
+              <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-5">
+                <span className="relative flex h-2.5 w-2.5 shrink-0">
+                  <span
+                    className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                    style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                  />
+                  <span
+                    className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                    style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+                  />
+                </span>
+                Singapore Office
+              </p>
               <div className="space-y-5">
                 <div className="flex gap-4">
                   <MapPin size={18} className="mt-1 shrink-0 text-aurora-2" />
@@ -280,10 +305,10 @@ function Contact() {
                 <div className="flex gap-4">
                   <Mail size={18} className="mt-1 shrink-0 text-aurora-2" />
                   <a
-                    href="mailto:hello@ats-engineering.sg"
+                    href="mailto:info@atsce.com.sg"
                     className="hover:text-aurora-2 transition text-ink break-all"
                   >
-                    hello@ats-engineering.sg
+                    info@atsce.com.sg
                   </a>
                 </div>
               </div>

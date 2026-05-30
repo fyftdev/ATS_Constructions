@@ -111,9 +111,21 @@ function Certifications() {
     <Layout>
       <section className="px-4 md:px-6 pt-12 md:pt-20 pb-12">
         <div className="max-w-[1280px] mx-auto">
-          <p className="label-mono mb-6 reveal">Trust & Compliance</p>
+          <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-6 reveal">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span
+                className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+            </span>
+            Trust & Compliance
+          </p>
           <h1 className="font-display text-[clamp(2.5rem,7vw,6.5rem)] leading-[0.98] max-w-5xl reveal text-ink">
-            We hold ourselves to <em className="italic text-gradient">mature standards</em>.
+            WE HOLD OURSELVES TO <em className="italic text-gradient">MATURE STANDARDS</em>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-ink leading-relaxed reveal">
             Tap any card to read what it covers and why it matters. Certifications are a baseline —
@@ -158,7 +170,19 @@ function Certifications() {
 
       <section className="px-4 md:px-6 pb-24">
         <div className="max-w-3xl mx-auto text-center reveal">
-          <p className="label-mono mb-5">A note on standards</p>
+          <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-5">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span
+                className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+            </span>
+            A note on standards
+          </p>
           <p className="font-display italic text-2xl md:text-4xl text-ink leading-[1.2]">
             "A certificate proves we passed an audit. The point is to pass the audit on every day we
             are <span className="text-gradient not-italic">not</span> being audited."

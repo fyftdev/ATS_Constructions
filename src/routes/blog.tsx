@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Insights — AtS Constructions & Engineering" },
+      { title: "ATS | Insights" },
       {
         name: "description",
         content:
@@ -36,15 +36,26 @@ function Blog() {
   }, []);
   const featured = shuffled[0];
   const rest = shuffled.slice(1);
-  
 
   return (
     <Layout>
       <section className="px-4 md:px-6 pt-12 md:pt-20 pb-12">
         <div className="max-w-[1280px] mx-auto">
-          <p className="label-mono mb-6 reveal">Insights</p>
+          <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-6 reveal">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span
+                className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
+              />
+            </span>
+            Insights
+          </p>
           <h1 className="font-display text-[clamp(2.5rem,7vw,6.5rem)] leading-[0.98] max-w-5xl reveal text-ink">
-            Field notes from <em className="italic text-gradient">our engineers</em>.
+            FIELD NOTES FROM <em className="italic text-gradient">OUR ENGINEERS</em>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-ink leading-relaxed reveal">
             Tap any article to read the full piece — your place on this page is kept.

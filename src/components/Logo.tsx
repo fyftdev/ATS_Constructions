@@ -1,4 +1,4 @@
-import logoSrc from "@/assets/ats-logo.webp";
+import logoSrc from "@/assets/ats-logo-transparent.png";
 
 export function Logo() {
   return (
@@ -6,10 +6,11 @@ export function Logo() {
       <img
         src={logoSrc}
         alt="AtS Constructions & Engineering"
-        width={140}
-        height={80}
         className="relative h-9 md:h-10 w-auto object-contain"
-        style={{ mixBlendMode: "multiply" }}
+        style={{
+          mixBlendMode: "multiply",
+          backgroundColor: "transparent",
+        }}
       />
     </div>
   );
