@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate, useLocation } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -14,13 +14,31 @@ const links = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // FIXED: Consolidated function to handle smooth scrolling if already on the page, or route if away
+  const handleQuoteClick = (e: React.MouseEvent) => {
+    setOpen(false);
+
+    // Check if the contact form element is physically present on the current screen
+    const contactForm = document.getElementById("contact-form-section");
+
+    if (contactForm && location.pathname === "/contact") {
+      e.preventDefault();
+      contactForm.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // If not on the page, navigate over with the intent query parameters intact
+      navigate({ to: "/contact", search: { intent: "quote" } });
+    }
+  };
+
   return (
     <>
       {/* OPTIMIZED: Adjusted top placement to give the bigger floating navbar enough space */}
       <header className="fixed top-4 md:top-8 inset-x-0 z-40 px-4 md:px-8">
         {/* CHANGED: Swapped py-3 md:py-4 for a deeper py-4 md:py-5 layout, increased tracking padding */}
         <div className="max-w-[1340px] mx-auto glass-strong rounded-full pl-6 md:pl-10 pr-3 md:pr-4 py-4 md:py-5 flex items-center justify-between gap-6 shadow-xl transition-all duration-300">
-          {/* CHANGED: Increased logo container wrapper space and applied scale styling */}
           <Link
             to="/"
             className="shrink-0 flex items-center scale-105 md:scale-115 origin-left transition-transform duration-300"
@@ -44,13 +62,14 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            {/* OPTIMIZED: Slightly broader structural CTA button block matching the deeper nav layout */}
-            <Link
-              to="/contact"
-              className="btn-primary !py-3.5 !px-6 md:!px-7 !text-xs md:!text-sm hidden sm:inline-flex items-center gap-2 font-medium"
+            {/* FIXED DESKTOP CTA: Intercepts action to jump straight to form if already active */}
+            <a
+              href="/contact"
+              onClick={handleQuoteClick}
+              className="btn-primary !py-3.5 !px-6 md:!px-7 !text-xs md:!text-sm hidden sm:inline-flex items-center gap-2 font-medium cursor-pointer"
             >
               Get a Quote <ArrowUpRight size={16} />
-            </Link>
+            </a>
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
@@ -63,13 +82,12 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile sheet */}
+      {/* Mobile menu sheet overlay */}
       <div
         className={`fixed inset-0 z-30 lg:hidden transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         onClick={() => setOpen(false)}
       >
         <div className="absolute inset-0 bg-midnight-deep/60 backdrop-blur-sm" />
-        {/* OPTIMIZED: Shifted downward to top-28 to clear the deeper navbar height layout */}
         <div
           className={`absolute top-28 left-4 right-4 glass-strong rounded-3xl p-6 transition-transform duration-300 ${open ? "translate-y-0" : "-translate-y-4"}`}
           onClick={(e) => e.stopPropagation()}
@@ -86,13 +104,15 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              onClick={() => setOpen(false)}
-              className="btn-primary mt-4 justify-center py-3.5"
+
+            {/* FIXED MOBILE CTA: Intercepts action to scroll or jump dynamically */}
+            <a
+              href="/contact"
+              onClick={handleQuoteClick}
+              className="btn-primary mt-4 justify-center py-3.5 cursor-pointer flex items-center gap-2"
             >
               Get a Quote <ArrowUpRight size={14} />
-            </Link>
+            </a>
           </nav>
         </div>
       </div>

@@ -101,7 +101,7 @@ function Services() {
             <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-amber-glow/25 blur-3xl" />
             <div className="md:col-span-8 relative">
               <h2 className="font-display text-3xl md:text-5xl leading-[1.05] text-ink">
-                Don't see your scope? <em className="italic text-gradient">Ask anyway.</em>
+                Don't see your scope? <em className="italic text-gradient">Ask anyway</em>
               </h2>
               <p className="mt-4 text-ink max-w-xl">
                 We respond to every enquiry within one business day with a structured next step.

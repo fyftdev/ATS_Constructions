@@ -34,7 +34,9 @@ export function Footer() {
 
         {/* Navigation Links Column */}
         <div className="md:col-span-3 lg:col-span-3">
-          <p className="label-mono mb-6 text-xs uppercase tracking-widest text-ink/40">Navigate</p>
+          <p className="font-mono mb-6 text-xs uppercase tracking-widest text-zinc-800 font-black">
+            Navigate
+          </p>
           <ul className="space-y-3.5 text-sm text-ink-soft">
             {[
               ["/", "Home"],
@@ -59,26 +61,26 @@ export function Footer() {
 
         {/* Structural Interactive Office Cards Column */}
         <div className="md:col-span-5 lg:col-span-4">
-          <p className="label-mono mb-6 text-xs uppercase tracking-widest text-ink/40">
+          <p className="font-mono mb-6 text-xs uppercase tracking-widest text-zinc-800 font-black">
             Singapore Head Office
           </p>
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 w-full">
             {/* Map Location Card */}
             <a
               href="https://maps.google.com/?q=61A+Tuas+South+Avenue+1,+Singapore+637326"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-start gap-4 p-4 rounded-2xl border border-ink/5 bg-ink/[0.01] hover:bg-amber-glow/[0.02] hover:border-aurora-2/30 transition-all duration-300 text-left"
+              className="group relative flex items-start gap-4 p-4 rounded-2xl border border-ink/5 bg-ink/[0.01] hover:bg-amber-glow/[0.02] hover:border-aurora-2/30 transition-all duration-300 text-left w-full"
             >
               <div className="p-2.5 rounded-xl bg-ink/[0.03] text-ink-soft group-hover:text-aurora-2 group-hover:bg-aurora-2/10 transition-colors duration-300 shrink-0">
                 <MapPin size={16} />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[10px] uppercase tracking-widest text-ink-soft/50 font-mono mb-1">
+                <p className="text-[10px] uppercase tracking-widest text-zinc-700 font-mono font-black mb-1">
                   HQ Coordinates
                 </p>
-                <p className="text-xs md:text-sm font-medium text-ink leading-relaxed">
+                <p className="text-xs md:text-sm font-medium text-ink leading-relaxed whitespace-normal break-words">
                   61A TUAS SOUTH AVENUE 1,
                   <br />
                   SINGAPORE 637326
@@ -90,39 +92,39 @@ export function Footer() {
               />
             </a>
 
-            {/* Communication Hub Grid row Split */}
-            <div className="grid sm:grid-cols-2 gap-3">
+            {/* CHANGED: Replaced block grids with an adaptive auto-fitting flex-wrap engine */}
+            <div className="flex flex-wrap items-stretch gap-3 w-full">
               {/* Phone Line Card */}
               <a
                 href="tel:+917092345407"
-                className="group flex items-center gap-3.5 p-4 rounded-2xl border border-ink/5 bg-ink/[0.01] hover:bg-amber-glow/[0.02] hover:border-aurora-2/30 transition-all duration-300 text-left"
+                className="group flex items-center gap-3.5 p-4 rounded-2xl border border-ink/5 bg-ink/[0.01] hover:bg-amber-glow/[0.02] hover:border-aurora-2/30 transition-all duration-300 text-left flex-1 min-w-[160px]"
               >
                 <div className="p-2.5 rounded-xl bg-ink/[0.03] text-ink-soft group-hover:text-aurora-2 group-hover:bg-aurora-2/10 transition-colors duration-300 shrink-0">
                   <Phone size={15} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[10px] uppercase tracking-widest text-ink-soft/50 font-mono mb-0.5">
+                  <p className="text-[10px] uppercase tracking-widest text-zinc-700 font-mono font-black mb-0.5">
                     Direct
                   </p>
-                  <p className="text-xs font-semibold text-ink tracking-tight truncate">
+                  <p className="text-xs font-semibold text-ink tracking-tight whitespace-nowrap">
                     +91 7092 345407
                   </p>
                 </div>
               </a>
 
-              {/* Email Gateway Card */}
+              {/* Email Gateway Card: Now grows dynamically to fit data perfectly */}
               <a
                 href="mailto:info@atsce.com.sg"
-                className="group flex items-center gap-3.5 p-4 rounded-2xl border border-ink/5 bg-ink/[0.01] hover:bg-amber-glow/[0.02] hover:border-aurora-2/30 transition-all duration-300 text-left"
+                className="group flex items-center gap-3.5 p-4 rounded-2xl border border-ink/5 bg-ink/[0.01] hover:bg-amber-glow/[0.02] hover:border-aurora-2/30 transition-all duration-300 text-left flex-grow max-w-full w-fit min-w-fit"
               >
                 <div className="p-2.5 rounded-xl bg-ink/[0.03] text-ink-soft group-hover:text-aurora-2 group-hover:bg-aurora-2/10 transition-colors duration-300 shrink-0">
                   <Mail size={15} />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-[10px] uppercase tracking-widest text-ink-soft/50 font-mono mb-0.5">
+                <div className="pr-2">
+                  <p className="text-[10px] uppercase tracking-widest text-zinc-700 font-mono font-black mb-0.5">
                     Inquiries
                   </p>
-                  <p className="text-xs font-semibold text-ink tracking-tight truncate">
+                  <p className="text-xs font-semibold text-ink tracking-tight whitespace-nowrap">
                     info@atsce.com.sg
                   </p>
                 </div>
@@ -143,7 +145,6 @@ export function Footer() {
             />
             © {new Date().getFullYear()} AtS Constructions & Engineering
           </span>
-          <span>SYSTEM ARCHITECTURE BY FYFT TECHNOLOGIES</span>
         </div>
       </div>
     </footer>

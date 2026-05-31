@@ -62,7 +62,13 @@ const schema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name too long"),
   company: z.string().trim().max(120, "Company too long").optional(),
   email: z.string().trim().email("Enter a valid email").max(255),
-  phone: z.string().trim().max(40).optional(),
+  phone: z
+    .string()
+    .trim()
+    .max(40)
+    .regex(/^\d+$/, "Phone number must contain digits only")
+    .optional()
+    .or(z.literal("")),
   scope: z.string().min(1, "Please select a scope"),
   message: z
     .string()
@@ -145,7 +151,10 @@ function Contact() {
             <br />
             <em className="italic text-gradient">LET'S ENGINEER IT</em>
           </h1>
-          <p className="mt-6 max-w-xl text-base md:text-lg text-ink-soft leading-relaxed reveal">
+          <p
+            id="contact-form-section"
+            className="mt-6 max-w-xl text-base md:text-lg text-ink-soft leading-relaxed reveal"
+          >
             A senior engineer will personally reply within one business day.
           </p>
         </div>
@@ -222,8 +231,23 @@ function Contact() {
                       name="phone"
                       placeholder="Phone number"
                       autoComplete="tel-national"
-                      inputMode="tel"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
                       className="field-input flex-1 min-w-0"
+                      onKeyDown={(e) => {
+                        const allowed = [
+                          "Backspace",
+                          "Delete",
+                          "Tab",
+                          "ArrowLeft",
+                          "ArrowRight",
+                          "Home",
+                          "End",
+                        ];
+                        if (!allowed.includes(e.key) && !/^\d$/.test(e.key)) {
+                          e.preventDefault();
+                        }
+                      }}
                     />
                   </div>
                   {errors.phone && <ErrorLine msg={errors.phone} />}

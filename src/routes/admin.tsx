@@ -174,21 +174,11 @@ function AdminComponent() {
     <Layout>
       <div className="w-full text-zinc-900 bg-transparent">
         {isLoggedIn ? (
-          /* --- VIEW A: SECURE MANAGEMENT MATRIX --- */
-          <div className="pt-6 pb-24 max-w-[1340px] mx-auto px-4 md:px-6 space-y-10">
+          /* --- VIEW A: OPERATIONS DASHBOARD MATRIX --- */
+          <div className="pt-6 pb-24 max-w-[1500px] mx-auto px-4 md:px-6 space-y-10">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 border-b border-zinc-100 pb-8">
               <div>
-                <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-4">
-                  <span className="relative flex h-2.5 w-2.5 shrink-0">
-                    <span
-                      className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full"
-                      style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
-                    />
-                    <span
-                      className="relative inline-flex h-2.5 w-2.5 rounded-full"
-                      style={{ background: "linear-gradient(135deg, #b45309, #d97706)" }}
-                    />
-                  </span>
+                <p className="text-amber-600 font-mono text-xs font-bold tracking-widest uppercase mb-2">
                   Operational Control Core
                 </p>
                 <h1 className="font-display text-[clamp(1.5rem,3.2vw,2.5rem)] font-bold tracking-tight text-zinc-950">
@@ -201,10 +191,9 @@ function AdminComponent() {
                 </p>
               </div>
 
-              {/* UPDATED: Logout button styled cleanly in solid red and white text */}
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-sm border border-transparent cursor-pointer animate-fade-in"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-sm border border-transparent cursor-pointer"
               >
                 <LogOut size={13} /> LOGOUT
               </button>
@@ -212,33 +201,41 @@ function AdminComponent() {
 
             <div className="bg-transparent rounded-none border-none mt-12">
               <div className="overflow-x-auto">
-                <Table className="border-separate border-spacing-y-4 w-full">
-                  {/* CHANGED: Made table headers significantly bigger (text-sm) and bold (font-black) with tracking adjustments */}
-                  <TableHeader
-                    className="rounded-2xl shadow-[0_4px_14px_rgba(0,0,0,0.08)]"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, oklch(0.45 0.1 30) 0%, oklch(0.55 0.15 45) 55%, oklch(0.7 0.16 60) 100%)",
-                    }}
-                  >
-                    <TableRow className="hover:bg-transparent border-none shadow-none">
-                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white text-center w-[100px] py-5 px-3 rounded-l-2xl border-r border-white/10">
+                <Table className="border-separate border-spacing-y-4 w-full min-w-[1200px]">
+                  <TableHeader className="bg-transparent border-none">
+                    <TableRow
+                      className="hover:bg-transparent border-none shadow-[0_4px_20px_-4px_rgba(139,69,19,0.15)] overflow-hidden"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, oklch(0.45 0.1 30) 0%, oklch(0.55 0.15 45) 55%, oklch(0.7 0.16 60) 100%)",
+                      }}
+                    >
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-widest !text-white text-center w-[80px] py-5 px-3 rounded-l-2xl border-r border-white/10">
                         MARK
                       </TableHead>
-                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[240px]">
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-widest !text-white py-5 px-4 border-r border-white/10 w-[220px]">
                         QUEUE STATUS
                       </TableHead>
-                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[140px]">
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-widest !text-white py-5 px-4 border-r border-white/10 w-[130px]">
                         LOG DATE
                       </TableHead>
-                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[200px]">
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[180px]">
                         CLIENT PRINCIPAL
                       </TableHead>
-                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[380px]">
-                        COMMUNICATION & PROJECT DESCRIPTION
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[240px]">
+                        EMAIL
                       </TableHead>
-                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-5 rounded-r-2xl">
-                        PROJECT SCOPE SEGMENT
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[160px]">
+                        PHONE NUMBER
+                      </TableHead>
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[340px]">
+                        PROJECT BRIEF
+                      </TableHead>
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-4 border-r border-white/10 w-[200px]">
+                        SCOPE SEGMENT
+                      </TableHead>
+                      <TableHead className="font-mono text-sm !font-black uppercase tracking-wider !text-white py-5 px-5 rounded-r-2xl text-center w-[110px]">
+                        ACTION
                       </TableHead>
                     </TableRow>
                   </TableHeader>
@@ -247,7 +244,7 @@ function AdminComponent() {
                     {submissions.length === 0 ? (
                       <TableRow className="bg-white border border-zinc-100 rounded-2xl shadow-sm">
                         <TableCell
-                          colSpan={6}
+                          colSpan={9}
                           className="text-center py-24 text-zinc-400 font-mono text-xs tracking-widest uppercase rounded-2xl"
                         >
                           No project inquiries recorded in this partition database block.
@@ -258,10 +255,11 @@ function AdminComponent() {
                         <TableRow
                           key={row.id}
                           onClick={() => setSelectedLead(row)}
-                          className={`group bg-white border border-zinc-200/60 rounded-2xl transition-all duration-300 cursor-pointer shadow-[0_2px_8px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.07)] hover:border-zinc-400 relative ${row.is_completed ? "opacity-75 bg-zinc-50/50" : ""
-                            }`}
+                          className={`group bg-white border border-zinc-200/60 rounded-2xl transition-all duration-300 cursor-pointer shadow-[0_2px_8px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.07)] hover:border-zinc-400 relative ${
+                            row.is_completed ? "bg-zinc-50/70" : ""
+                          }`}
                         >
-                          {/* Column 1: Checkbox */}
+                          {/* Col 1: Checkbox */}
                           <TableCell
                             className="py-5 pl-6 text-center rounded-l-2xl border-y border-l border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors"
                             onClick={(e) => e.stopPropagation()}
@@ -282,10 +280,10 @@ function AdminComponent() {
                             </div>
                           </TableCell>
 
-                          {/* Column 2: Explicit Conditions Status Badges */}
+                          {/* Col 2: Status Badge */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
                             {row.is_completed ? (
-                              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-green-50 text-green-700 border border-green-200/80">
+                              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-green-50 text-green-700 border border-green-200">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-500" />✓ Lead
                                 Completed
                               </span>
@@ -297,10 +295,13 @@ function AdminComponent() {
                             )}
                           </TableCell>
 
-                          {/* Column 3: Log Date */}
-                          <TableCell className="py-5 text-zinc-500 font-mono text-[11px] font-medium border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
-                            <div className="flex items-center gap-1.5 text-zinc-400 group-hover:text-zinc-600 transition-colors">
-                              <Clock size={12} />
+                          {/* Col 3: Log Date */}
+                          <TableCell className="py-5 text-zinc-600 font-mono text-[11px] font-medium border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
+                            <div className="flex items-center gap-1.5 text-zinc-600 group-hover:text-zinc-900 transition-colors">
+                              <Clock
+                                size={12}
+                                className="text-zinc-400 group-hover:text-zinc-600"
+                              />
                               {new Date(row.created_at).toLocaleDateString(undefined, {
                                 month: "short",
                                 day: "numeric",
@@ -309,49 +310,70 @@ function AdminComponent() {
                             </div>
                           </TableCell>
 
-                          {/* Column 4: Client Principal */}
+                          {/* Col 4: Client Principal */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
                             <div
-                              className={`font-bold text-zinc-900 group-hover:text-amber-600 transition-colors text-sm ${row.is_completed ? "text-zinc-400 line-through font-medium" : ""
-                                }`}
+                              className={`font-bold text-zinc-900 group-hover:text-amber-600 transition-colors text-sm ${
+                                row.is_completed ? "text-zinc-500 line-through font-semibold" : ""
+                              }`}
                             >
                               {row.full_name}
                             </div>
                           </TableCell>
 
-                          {/* Column 5: Communication Vectors & Project Inline Summary Description */}
+                          {/* Col 5: Email Field */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
-                            <div className="flex flex-col gap-1.5 max-w-[340px]">
-                              <div className="flex items-center gap-3 text-xs text-zinc-600 font-medium">
-                                <span>{row.email}</span>
-                                <span className="text-zinc-300">|</span>
-                                <span className="font-mono text-[11px] text-zinc-400">
-                                  {row.phone || "—"}
-                                </span>
-                              </div>
-                              <p
-                                className={`text-xs text-zinc-500 leading-relaxed bg-zinc-50/80 p-2.5 rounded-xl border border-zinc-100/80 font-normal ${row.is_completed ? "text-zinc-400/80 line-through" : ""
-                                  }`}
-                              >
-                                {row.message}
-                              </p>
-                            </div>
+                            <span
+                              className={`text-xs font-medium text-zinc-800 break-all ${
+                                row.is_completed ? "text-zinc-500 font-normal" : ""
+                              }`}
+                            >
+                              {row.email}
+                            </span>
                           </TableCell>
 
-                          {/* Column 6: Project Segment Scope */}
-                          <TableCell className="py-5 pr-6 rounded-r-2xl border-y border-r border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
-                            <div className="flex items-center justify-between gap-4">
-                              <span
-                                className={`px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold uppercase tracking-wide border shrink-0 ${row.is_completed
-                                  ? "bg-zinc-50 text-zinc-400 border-zinc-200/60"
+                          {/* FIXED Col 6: High Contrast Solid Dark-Charcoal Phone Field */}
+                          <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
+                            <span
+                              className={`font-mono text-xs font-bold tracking-tight text-zinc-900 ${
+                                row.is_completed ? "text-zinc-600 font-semibold" : ""
+                              }`}
+                            >
+                              {row.phone || "—"}
+                            </span>
+                          </TableCell>
+
+                          {/* Col 7: Project Description */}
+                          <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
+                            <p
+                              className={`text-xs text-zinc-800 leading-relaxed bg-zinc-50 p-2.5 rounded-xl border border-zinc-200/60 font-normal max-w-[320px] max-h-[72px] overflow-y-auto ${
+                                row.is_completed
+                                  ? "text-zinc-600 border-zinc-200/40 bg-zinc-100/40"
+                                  : ""
+                              }`}
+                            >
+                              {row.message}
+                            </p>
+                          </TableCell>
+
+                          {/* Col 8: Scope Badge */}
+                          <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
+                            <span
+                              className={`px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold uppercase tracking-wide border inline-block ${
+                                row.is_completed
+                                  ? "bg-zinc-100 text-zinc-600 border-zinc-200/60"
                                   : "bg-zinc-900 text-white border-zinc-900"
-                                  }`}
-                              >
-                                {row.interest_of_scope || "General Brief"}
-                              </span>
-                              <div className="flex items-center gap-1 text-xs text-zinc-400 font-mono group-hover:text-zinc-900 transition-colors opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                                inspect <ArrowUpRight size={13} />
-                              </div>
+                              }`}
+                            >
+                              {row.interest_of_scope || "General Brief"}
+                            </span>
+                          </TableCell>
+
+                          {/* Col 9: Standard Hover Action */}
+                          <TableCell className="py-5 pr-6 rounded-r-2xl border-y border-r border-zinc-200/50 group-hover:border-zinc-300/80 text-center transition-colors">
+                            <div className="flex items-center justify-center gap-1 text-xs text-zinc-400 font-mono font-bold group-hover:text-zinc-950 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                              <span>INSPECT</span>
+                              <ArrowUpRight size={14} className="text-amber-600" />
                             </div>
                           </TableCell>
                         </TableRow>
@@ -382,10 +404,11 @@ function AdminComponent() {
                           onClick={() =>
                             handleStatusToggle(selectedLead.id, selectedLead.is_completed || false)
                           }
-                          className={`flex items-center gap-1.5 px-3 py-1 rounded-full border text-[11px] font-mono font-bold uppercase tracking-wider transition-all duration-300 ${selectedLead.is_completed
-                            ? "bg-green-50 text-green-700 border-green-200"
-                            : "bg-amber-50 text-amber-700 border-amber-200/70"
-                            }`}
+                          className={`flex items-center gap-1.5 px-3 py-1 rounded-full border text-[11px] font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
+                            selectedLead.is_completed
+                              ? "bg-green-50 text-green-700 border-green-200"
+                              : "bg-amber-50 text-amber-700 border-amber-200/70"
+                          }`}
                         >
                           <span
                             className={`w-1.5 h-1.5 rounded-full ${selectedLead.is_completed ? "bg-green-500" : "bg-amber-500 animate-pulse"}`}
@@ -402,10 +425,11 @@ function AdminComponent() {
                             STATUS
                           </span>
                           <p
-                            className={`text-xs font-bold font-mono uppercase tracking-wider px-2.5 py-1 rounded-md border inline-block ${selectedLead.is_completed
-                              ? "bg-green-50/40 text-green-700 border-green-100"
-                              : "bg-zinc-50 text-zinc-800 border-zinc-200"
-                              }`}
+                            className={`text-xs font-bold font-mono uppercase tracking-wider px-2.5 py-1 rounded-md border inline-block ${
+                              selectedLead.is_completed
+                                ? "bg-green-50/40 text-green-700 border-green-100"
+                                : "bg-zinc-50 text-zinc-800 border-zinc-200"
+                            }`}
                           >
                             {selectedLead.is_completed
                               ? "✓ LEAD COMPLETED"
@@ -499,11 +523,7 @@ function AdminComponent() {
           <div className="pt-8 md:pt-10 pb-32 flex flex-col items-center justify-start px-4 md:px-6">
             <div className="w-full max-w-md space-y-8">
               <div className="text-center space-y-2">
-                <p className="blueprint-header-strip inline-flex items-center gap-3 px-5 py-2.5 mb-2">
-                  <span className="relative flex h-2.5 w-2.5 shrink-0">
-                    <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full" style={{ background: 'linear-gradient(135deg, #b45309, #d97706)' }} />
-                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full" style={{ background: 'linear-gradient(135deg, #b45309, #d97706)' }} />
-                  </span>
+                <p className="text-amber-600 font-mono text-[11px] uppercase tracking-widest">
                   Gateway Vault
                 </p>
                 <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-zinc-900">

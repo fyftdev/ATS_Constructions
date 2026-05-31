@@ -277,7 +277,7 @@ function Home() {
               The AtS standard
             </p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.02] text-ink uppercase tracking-tight">
-              Achieving Timelines <em className="italic text-gradient">Safely.</em>
+              Achieving Timelines <em className="italic text-gradient">Safely</em>
             </h2>
             <p className="mt-6 text-ink-soft leading-relaxed">
               More than an acronym — it's the discipline behind every AtS site. We deliver on
@@ -329,7 +329,7 @@ function Home() {
           <blockquote className="font-display text-[clamp(1.75rem,4.5vw,3.75rem)] leading-[1.12] text-ink">
             "Buildings outlive their builders. We design every joint and every beam knowing it will
             be inspected — most importantly, by{" "}
-            <span className="text-gradient not-italic">time</span>."
+            <span className="text-gradient not-italic">time</span>"
           </blockquote>
           <div className="mt-10 inline-flex items-center gap-4">
             <div className="h-px w-12 bg-aurora-2/40" />
@@ -363,7 +363,7 @@ function Home() {
                 <h2 className="font-display text-3xl md:text-6xl leading-[1.02] text-ink">
                   Have a build in mind?
                   <br />
-                  <em className="italic text-gradient">Let's engineer it.</em>
+                  <em className="italic text-gradient">Let's engineer it</em>
                 </h2>
               </div>
               <div className="md:col-span-4 md:text-right">

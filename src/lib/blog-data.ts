@@ -3,7 +3,7 @@ import bSafety from "@/assets/blog-safety.webp";
 import bSustain from "@/assets/blog-sustain.webp";
 import bBim from "@/assets/blog-bim.webp";
 import bDrawings from "@/assets/blog-drawings.webp";
-import bHighrise from "@/assets/blog-highrise.webp";
+import bHighrise from "@/assets/blog-highrise.jpeg";
 import bConcrete from "@/assets/blog-concrete.webp";
 import bHandover from "@/assets/blog-handover.webp";
 

@@ -83,22 +83,22 @@ export const Route = createFileRoute("/about")({
 const writeups = [
   {
     label: "Our craft",
-    title: "Engineering as a discipline of patience.",
+    title: "Engineering as a discipline of patience",
     body: "We build slowly enough to build correctly. Every weld is photographed, every concrete pour logged, every drawing reviewed by a senior before it leaves the table. Patience is not a luxury on our sites — it is the method.",
   },
   {
     label: "Our crews",
-    title: "Site teams trained to think, not just lift.",
+    title: "Site teams trained to think, not just lift",
     body: "Our crews are full-time, paid above market and trained continuously. The yellow helmets you see on an AtS site are not subcontracted strangers — they are people who can read a drawing, flag a defect, and stop the line if it does not look right.",
   },
   {
     label: "Our supervisors",
-    title: "White helmets that earn their colour.",
+    title: "White helmets that earn their colour",
     body: "An AtS supervisor has spent at least a decade on tools before they wear the white hat. They lead by walking, not by emailing — present at the first pour, the last commissioning test, and every uncomfortable conversation in between.",
   },
   {
     label: "Our promise",
-    title: "Accountability with a single name on it.",
+    title: "Accountability with a single name on it",
     body: "From the first conversation to the final handover, the same senior engineer carries your project. There is no junior re-bid, no after-sale silence. If something is not right, you know who to call — and they will already be on the way.",
   },
 ];
