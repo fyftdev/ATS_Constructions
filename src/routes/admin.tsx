@@ -255,9 +255,8 @@ function AdminComponent() {
                         <TableRow
                           key={row.id}
                           onClick={() => setSelectedLead(row)}
-                          className={`group bg-white border border-zinc-200/60 rounded-2xl transition-all duration-300 cursor-pointer shadow-[0_2px_8px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.07)] hover:border-zinc-400 relative ${
-                            row.is_completed ? "bg-zinc-50/70" : ""
-                          }`}
+                          className={`group bg-white border border-zinc-200/60 rounded-2xl transition-all duration-300 cursor-pointer shadow-[0_2px_8px_-3px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.07)] hover:border-zinc-400 relative ${row.is_completed ? "bg-zinc-50/70" : ""
+                            }`}
                         >
                           {/* Col 1: Checkbox */}
                           <TableCell
@@ -313,9 +312,8 @@ function AdminComponent() {
                           {/* Col 4: Client Principal */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
                             <div
-                              className={`font-bold text-zinc-900 group-hover:text-amber-600 transition-colors text-sm ${
-                                row.is_completed ? "text-zinc-500 line-through font-semibold" : ""
-                              }`}
+                              className={`font-bold text-zinc-900 group-hover:text-amber-600 transition-colors text-sm ${row.is_completed ? "text-zinc-500 line-through font-semibold" : ""
+                                }`}
                             >
                               {row.full_name}
                             </div>
@@ -324,9 +322,8 @@ function AdminComponent() {
                           {/* Col 5: Email Field */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
                             <span
-                              className={`text-xs font-medium text-zinc-800 break-all ${
-                                row.is_completed ? "text-zinc-500 font-normal" : ""
-                              }`}
+                              className={`text-xs font-medium text-zinc-800 break-all ${row.is_completed ? "text-zinc-500 font-normal" : ""
+                                }`}
                             >
                               {row.email}
                             </span>
@@ -335,9 +332,8 @@ function AdminComponent() {
                           {/* FIXED Col 6: High Contrast Solid Dark-Charcoal Phone Field */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
                             <span
-                              className={`font-mono text-xs font-bold tracking-tight text-zinc-900 ${
-                                row.is_completed ? "text-zinc-600 font-semibold" : ""
-                              }`}
+                              className={`font-mono text-xs font-bold tracking-tight text-zinc-900 ${row.is_completed ? "text-zinc-600 font-semibold" : ""
+                                }`}
                             >
                               {row.phone || "—"}
                             </span>
@@ -346,11 +342,10 @@ function AdminComponent() {
                           {/* Col 7: Project Description */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
                             <p
-                              className={`text-xs text-zinc-800 leading-relaxed bg-zinc-50 p-2.5 rounded-xl border border-zinc-200/60 font-normal max-w-[320px] max-h-[72px] overflow-y-auto ${
-                                row.is_completed
+                              className={`text-xs text-zinc-800 leading-relaxed bg-zinc-50 p-2.5 rounded-xl border border-zinc-200/60 font-normal max-w-[320px] max-h-[72px] overflow-y-auto ${row.is_completed
                                   ? "text-zinc-600 border-zinc-200/40 bg-zinc-100/40"
                                   : ""
-                              }`}
+                                }`}
                             >
                               {row.message}
                             </p>
@@ -359,11 +354,10 @@ function AdminComponent() {
                           {/* Col 8: Scope Badge */}
                           <TableCell className="py-5 border-y border-zinc-200/50 group-hover:border-zinc-300/80 transition-colors">
                             <span
-                              className={`px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold uppercase tracking-wide border inline-block ${
-                                row.is_completed
+                              className={`px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold uppercase tracking-wide border inline-block ${row.is_completed
                                   ? "bg-zinc-100 text-zinc-600 border-zinc-200/60"
                                   : "bg-zinc-900 text-white border-zinc-900"
-                              }`}
+                                }`}
                             >
                               {row.interest_of_scope || "General Brief"}
                             </span>
@@ -404,11 +398,10 @@ function AdminComponent() {
                           onClick={() =>
                             handleStatusToggle(selectedLead.id, selectedLead.is_completed || false)
                           }
-                          className={`flex items-center gap-1.5 px-3 py-1 rounded-full border text-[11px] font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
-                            selectedLead.is_completed
+                          className={`flex items-center gap-1.5 px-3 py-1 rounded-full border text-[11px] font-mono font-bold uppercase tracking-wider transition-all duration-300 ${selectedLead.is_completed
                               ? "bg-green-50 text-green-700 border-green-200"
                               : "bg-amber-50 text-amber-700 border-amber-200/70"
-                          }`}
+                            }`}
                         >
                           <span
                             className={`w-1.5 h-1.5 rounded-full ${selectedLead.is_completed ? "bg-green-500" : "bg-amber-500 animate-pulse"}`}
@@ -425,11 +418,10 @@ function AdminComponent() {
                             STATUS
                           </span>
                           <p
-                            className={`text-xs font-bold font-mono uppercase tracking-wider px-2.5 py-1 rounded-md border inline-block ${
-                              selectedLead.is_completed
+                            className={`text-xs font-bold font-mono uppercase tracking-wider px-2.5 py-1 rounded-md border inline-block ${selectedLead.is_completed
                                 ? "bg-green-50/40 text-green-700 border-green-100"
                                 : "bg-zinc-50 text-zinc-800 border-zinc-200"
-                            }`}
+                              }`}
                           >
                             {selectedLead.is_completed
                               ? "✓ LEAD COMPLETED"
