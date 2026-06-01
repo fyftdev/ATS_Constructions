@@ -12,4 +12,9 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
+  // Add this block to tell Vinxi's underlying bundler to compile for vercel instead of cloudflare
+  vite: {
+    // This overrides the build configuration setup targeting vercel
+    builder: "vercel"
+  }
 });
