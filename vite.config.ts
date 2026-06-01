@@ -10,11 +10,13 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
 export default defineConfig({
   tanstackStart: {
-    server: { entry: "server" },
+    server: { 
+      entry: "server",
+      // Force Nitro/Vinxi to compile Serverless Functions for Vercel instead of Cloudflare
+      preset: "vercel" 
+    },
   },
-  // Add this block to tell Vinxi's underlying bundler to compile for vercel instead of cloudflare
   vite: {
-    // This overrides the build configuration setup targeting vercel
-    builder: "vercel"
+    // You can safely pass custom client-side Vite configurations here if needed
   }
 });
