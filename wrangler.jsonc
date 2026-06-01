@@ -4,4 +4,8 @@
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/server.ts",
+  "vars": {
+    "VITE_SUPABASE_URL": "your-actual-supabase-url",
+    "VITE_SUPABASE_ANON_KEY": "your-actual-anon-key"
+  }
 }
