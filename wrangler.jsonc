@@ -5,7 +5,7 @@
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/server.ts",
   "vars": {
-    "VITE_SUPABASE_URL": "your-actual-supabase-url",
-    "VITE_SUPABASE_ANON_KEY": "your-actual-anon-key"
+    "VITE_SUPABASE_URL": "https://wsffbuqgkphpuzmtfzjt.supabase.co",
+    "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndzZmZidXFna3BocHV6bXRmemp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxMDgxOTcsImV4cCI6MjA5NDY4NDE5N30.nLXGkczwOrmKpnlAQklYuOHMY8n0zUmAaQZ_xjmjj18"
   }
 }
